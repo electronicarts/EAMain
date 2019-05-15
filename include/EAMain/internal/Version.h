@@ -1,10 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
-// Version.h
-//
-// Copyright (c) Electronic Arts Inc.
-// Written and maintained by Paul Pedriana.
+// Copyright (c) Electronic Arts Inc. All rights reserved.
 ///////////////////////////////////////////////////////////////////////////////
-
 
 #ifndef EAMAIN_INTERNAL_VERSION_H
 #define EAMAIN_INTERNAL_VERSION_H

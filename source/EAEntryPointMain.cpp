@@ -1,3 +1,7 @@
+///////////////////////////////////////////////////////////////////////////////
+// Copyright (c) Electronic Arts Inc. All rights reserved.
+///////////////////////////////////////////////////////////////////////////////
+
 #include "EABase/eabase.h"
 #if (defined(EA_PLATFORM_MICROSOFT) && !defined(CS_UNDEFINED_STRING) && !EA_WINAPI_FAMILY_PARTITION(EA_WINAPI_PARTITION_DESKTOP))
 #include <EAAssert/eaassert.h>
