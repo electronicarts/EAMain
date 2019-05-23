@@ -5,19 +5,28 @@ cmake_minimum_required(VERSION 3.1)
 project(EAMain CXX)
 
 #-------------------------------------------------------------------------------------------
-# Header only library 
+# Library definition
 #-------------------------------------------------------------------------------------------
-add_library(EAMain INTERFACE)
+file(GLOB EAMAIN_SOURCES "source/*" "include/*.inl" "include/*.h" "include/EAMain/internal/*")
+add_library(EAMain ${EAMAIN_SOURCES})
 
 #-------------------------------------------------------------------------------------------
-# Source files
+# Defines
 #-------------------------------------------------------------------------------------------
-file(GLOB EAMAIN_SOURCES "include/EAMain/*.*")
+add_definitions(-D_CHAR16T)
+add_definitions(-D_CRT_SECURE_NO_WARNINGS)
 
 #-------------------------------------------------------------------------------------------
-# exported include directories
+# Export Include Directories
 #-------------------------------------------------------------------------------------------
-target_include_directories(EAMain INTERFACE include)
+target_include_directories(EAMain PUBLIC include)
+target_include_directories(EAMain PUBLIC source)
 
-# Workaround to have header files show up in IDEs
-add_custom_target(EAMain_ide SOURCES ${EAMAIN_SOURCES})
+#-------------------------------------------------------------------------------------------
+# Package Dependencies 
+#-------------------------------------------------------------------------------------------
+target_link_libraries(EAMain EABase)
+target_link_libraries(EAMain EAAssert)
+target_link_libraries(EAMain EAStdC)
+
+
