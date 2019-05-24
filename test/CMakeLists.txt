@@ -54,6 +54,6 @@ target_link_libraries(EAMainTest EAThread)
 #-------------------------------------------------------------------------------------------
 # Run Unit tests and verify the results.
 #-------------------------------------------------------------------------------------------
-add_test(EAMainTestRuns EAMainTest)
+add_test(EAMainTestRuns EAMainTest -testargpassing)
 set_tests_properties (EAMainTestRuns PROPERTIES PASS_REGULAR_EXPRESSION "RETURNCODE=0")
 
