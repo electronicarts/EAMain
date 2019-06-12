@@ -10,6 +10,12 @@ project(EAMain CXX)
 option(EAMAIN_BUILD_TESTS "Enable generation of build files for tests" OFF)
 
 #-------------------------------------------------------------------------------------------
+# Compiler Flags
+#-------------------------------------------------------------------------------------------
+set (CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${CMAKE_CURRENT_SOURCE_DIR}/test/packages/EASTL/scripts/CMake")
+include(CommonCppFlags)
+
+#-------------------------------------------------------------------------------------------
 # Library definition
 #-------------------------------------------------------------------------------------------
 file(GLOB EAMAIN_SOURCES "source/*.cpp" "source/internal/*.cpp")
