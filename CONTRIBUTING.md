@@ -25,7 +25,7 @@ EAAssert uses CMake as its build system.
 * Create and navigate to "your_build_folder":
 	* mkdir your_build_folder && cd your_build_folder
 * Generate build scripts:
-	* cmake eastl_source_folder -DEAMAIN_BUILD_TESTS:BOOL=ON
+	* cmake source_folder -DEAMAIN_BUILD_TESTS:BOOL=ON
 * Build unit tests for "your_config":
 	* cmake --build . --config your_config
 * Run the unit tests for "your_config" from the test folder:
