@@ -17,7 +17,9 @@
     EA_DISABLE_ALL_VC_WARNINGS()
     #include <EAStdC/EAString.h>
     #include <malloc.h>
-    #define NOMINMAX
+    #ifndef NOMINMAX
+        #define NOMINMAX
+    #endif
     #include <Windows.h>
     #undef NOMINMAX
     EA_RESTORE_ALL_VC_WARNINGS()
