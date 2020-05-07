@@ -40,11 +40,11 @@ add_definitions(-DEAMAIN_NETWORK_CHANNEL_PORT=8080)
 #-------------------------------------------------------------------------------------------
 target_include_directories(EAMain PUBLIC include)
 target_include_directories(EAMain PUBLIC source)
+target_include_directories(EAMain PRIVATE ../EABase/include/Common)
 
 #-------------------------------------------------------------------------------------------
 # Package Dependencies 
 #-------------------------------------------------------------------------------------------
-target_link_libraries(EAMain EABase)
 target_link_libraries(EAMain EAAssert)
 target_link_libraries(EAMain EAStdC)
 
