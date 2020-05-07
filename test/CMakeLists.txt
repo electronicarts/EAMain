@@ -43,7 +43,7 @@ add_subdirectory(packages/EAStdC)
 add_subdirectory(packages/EATest)
 add_subdirectory(packages/EAThread)
 
-target_link_libraries(EAMainTest EABase)
+)
 target_link_libraries(EAMainTest EAAssert)
 target_link_libraries(EAMainTest EAMain)
 target_link_libraries(EAMainTest EASTL)
